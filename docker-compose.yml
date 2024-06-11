@@ -14,7 +14,7 @@ services:
       context: backend
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - "6001:6001"
     environment:
       SPRING_PROFILES_ACTIVE: docker
     depends_on:
@@ -27,7 +27,7 @@ services:
       context: frontend
       dockerfile: Dockerfile
     ports:
-      - "80:80"
+      - "6000:6000"
     depends_on:
       - lgm-backend
     networks:
